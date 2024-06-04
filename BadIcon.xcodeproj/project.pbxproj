@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		BF0BBAA22C0C3EE00075CB96 /* BadIconApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BBAA12C0C3EE00075CB96 /* BadIconApp.swift */; };
 		BF0BBAA42C0C3EE00075CB96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BBAA32C0C3EE00075CB96 /* ContentView.swift */; };
-		BF0BBAA62C0C3EE10075CB96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0BBAA52C0C3EE10075CB96 /* Assets.xcassets */; };
-		BF0BBAA92C0C3EE10075CB96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0BBAA82C0C3EE10075CB96 /* Preview Assets.xcassets */; };
 		BF0BBAB32C0C3EE20075CB96 /* BadIconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BBAB22C0C3EE20075CB96 /* BadIconTests.swift */; };
 		BF0BBABD2C0C3EE20075CB96 /* BadIconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BBABC2C0C3EE20075CB96 /* BadIconUITests.swift */; };
 		BF0BBABF2C0C3EE20075CB96 /* BadIconUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BBABE2C0C3EE20075CB96 /* BadIconUITestsLaunchTests.swift */; };
+		BF0BBAD02C0C3F520075CB96 /* IconAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BBACF2C0C3F520075CB96 /* IconAnimator.swift */; };
+		BF712F692C0DBB9E00F2F9CA /* BackgroundAnimateScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF712F682C0DBB9E00F2F9CA /* BackgroundAnimateScheduler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF04E7132C0DD9DB001989DD /* BGTaskScheduler+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BGTaskScheduler+Private.h"; sourceTree = "<group>"; };
 		BF0BBA9E2C0C3EE00075CB96 /* BadIcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadIcon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0BBAA12C0C3EE00075CB96 /* BadIconApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadIconApp.swift; sourceTree = "<group>"; };
 		BF0BBAA32C0C3EE00075CB96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +45,12 @@
 		BF0BBAB82C0C3EE20075CB96 /* BadIconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadIconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0BBABC2C0C3EE20075CB96 /* BadIconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadIconUITests.swift; sourceTree = "<group>"; };
 		BF0BBABE2C0C3EE20075CB96 /* BadIconUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadIconUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BF0BBACD2C0C3F1F0075CB96 /* LSApplicationProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSApplicationProxy.h; sourceTree = "<group>"; };
+		BF0BBACE2C0C3F360075CB96 /* LSBundleProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSBundleProxy.h; sourceTree = "<group>"; };
+		BF0BBACF2C0C3F520075CB96 /* IconAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconAnimator.swift; sourceTree = "<group>"; };
+		BF0BBAD12C0C40300075CB96 /* BadIcon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BadIcon-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF712F682C0DBB9E00F2F9CA /* BackgroundAnimateScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAnimateScheduler.swift; sourceTree = "<group>"; };
+		BFB8AE242C0DAC330067D6DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +101,12 @@
 		BF0BBAA02C0C3EE00075CB96 /* BadIcon */ = {
 			isa = PBXGroup;
 			children = (
+				BF0BBACB2C0C3EFD0075CB96 /* Utils */,
 				BF0BBAA12C0C3EE00075CB96 /* BadIconApp.swift */,
 				BF0BBAA32C0C3EE00075CB96 /* ContentView.swift */,
 				BF0BBAA52C0C3EE10075CB96 /* Assets.xcassets */,
 				BF0BBAA72C0C3EE10075CB96 /* Preview Content */,
+				BFB8AE242C0DAC330067D6DA /* Info.plist */,
 			);
 			path = BadIcon;
 			sourceTree = "<group>";
@@ -125,6 +134,27 @@
 				BF0BBABE2C0C3EE20075CB96 /* BadIconUITestsLaunchTests.swift */,
 			);
 			path = BadIconUITests;
+			sourceTree = "<group>";
+		};
+		BF0BBACB2C0C3EFD0075CB96 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BF0BBACC2C0C3F090075CB96 /* Headers */,
+				BF0BBACF2C0C3F520075CB96 /* IconAnimator.swift */,
+				BF712F682C0DBB9E00F2F9CA /* BackgroundAnimateScheduler.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BF0BBACC2C0C3F090075CB96 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				BF0BBACD2C0C3F1F0075CB96 /* LSApplicationProxy.h */,
+				BF0BBACE2C0C3F360075CB96 /* LSBundleProxy.h */,
+				BF0BBAD12C0C40300075CB96 /* BadIcon-Bridging-Header.h */,
+				BF04E7132C0DD9DB001989DD /* BGTaskScheduler+Private.h */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +261,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0BBAA92C0C3EE10075CB96 /* Preview Assets.xcassets in Resources */,
-				BF0BBAA62C0C3EE10075CB96 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +287,8 @@
 			files = (
 				BF0BBAA42C0C3EE00075CB96 /* ContentView.swift in Sources */,
 				BF0BBAA22C0C3EE00075CB96 /* BadIconApp.swift in Sources */,
+				BF712F692C0DBB9E00F2F9CA /* BackgroundAnimateScheduler.swift in Sources */,
+				BF0BBAD02C0C3F520075CB96 /* IconAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -417,6 +447,7 @@
 		BF0BBAC32C0C3EE20075CB96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLY_RULES_IN_COPY_HEADERS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -425,6 +456,7 @@
 				DEVELOPMENT_TEAM = CYVRCL87U4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BadIcon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -435,9 +467,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Wl,-U,_OBJC_CLASS_$_LSBundleProxy",
+					"-w",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nltv.BadIcon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "BadIcon/Utils/Headers/BadIcon-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -446,6 +483,7 @@
 		BF0BBAC42C0C3EE20075CB96 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLY_RULES_IN_COPY_HEADERS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +492,7 @@
 				DEVELOPMENT_TEAM = CYVRCL87U4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BadIcon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -464,9 +503,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Wl,-U,_OBJC_CLASS_$_LSBundleProxy",
+					"-w",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nltv.BadIcon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "BadIcon/Utils/Headers/BadIcon-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
